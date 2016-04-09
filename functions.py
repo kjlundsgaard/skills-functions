@@ -134,16 +134,51 @@ print a, b
 #    If the state is California, apply a 7% tax within the function.
 #    Your function should return the total cost of the item including tax.
 
+
+def calculate_tax_by_state(state, cost, tax=0.05):
+
+    if state == 'CA':
+        tax = 0.07
+
+    total_cost = cost + cost * tax
+    return total_cost
+
+
 # 2. Turn the block of code from the directions into a function.
 #	 Take a name and a job title as parameters, making it so the
 # 	 job title defaults to "Engineer" if a job title is not passed in.
 #	 Return the person's title and name.
 
-# 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:      
+
+def get_job_title(name, job_title='Engineer'):
+
+    return [job_title, name]
+
+# 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:
 #       Dear JOB_TITLE RECEIVER_NAME, I think you are amazing! Sincerely,
-#       SENDER_NAME. 
+#       SENDER_NAME.
 #    Use the function from #2 to construct the full title for the letter's greeting.
+
+
+def send_greeting(sender_name):
+
+    info = get_job_title('Katie')
+
+    name = info[1]
+    job_title = info[0]
+
+    print "Dear {} {}, I think you are amazing! Sincerely, {}".format(job_title, name, sender_name)
+
+send_greeting('YOUR BOSS')
+
 
 # 4. Turn the block of code from the directions into a function. This
 #    function will take a number and append it to *numbers*. It doesn't
 #    need to return anything.
+
+numbers = []
+
+
+def append_numbers(num):
+
+    numbers.append(num)
