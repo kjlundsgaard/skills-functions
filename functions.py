@@ -80,6 +80,12 @@ def get_spaces_num(sentence):
 #    default to 15%.
 
 
+def get_price_of_meal(meal_price, tip=0.15):
+
+    total_price = meal_price + meal_price * tip
+
+    return total_price
+
 # 9. Write a function that takes an integer as an argument and
 #    returns two pieces of information as strings ---
 #    "Positive" or "Negative" and "Even" or "Odd". The two strings
@@ -89,6 +95,29 @@ def get_spaces_num(sentence):
 # 	on a number and unpack what is returned into two
 # 	variables --- sign and parity (whether it's positive
 # 	or negative). Print sign and parity.
+
+
+def get_value_of_int(num):
+
+    info_list = ["", ""]
+
+    if num > 0:
+        info_list[0] = "Positive"
+    elif num < 0:
+        info_list[0] = "Negative"
+    else:
+        info_list = "Zero"
+
+    if num % 2 == 0:
+        info_list[1] = "Even"
+    else:
+        info_list[1] = "Odd"
+
+    return info_list
+
+a, b = get_value_of_int(-7)
+
+print a, b
 
 
 ################################################################
